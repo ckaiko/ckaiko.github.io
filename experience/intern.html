@@ -3,77 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SWE Intern &mdash; Cecilia Aiko</title>
+  <title>Data Science Intern &mdash; Cecilia Aiko</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <div class="bg-blobs" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
-  </div>
+  <div id="site-blobs" class="bg-blobs" aria-hidden="true"></div>
 
-  <nav id="navbar">
-    <a href="../index.html" class="nav-logo">Cecilia Aiko</a>
-    <ul class="nav-links">
-      <li><a href="../index.html" class="nav-link">Home</a></li>
-      <li><a href="../projects.html" class="nav-link">Projects</a></li>
-      <li><a href="../blog.html" class="nav-link">Blog</a></li>
-      <li><a href="../about.html" class="nav-link active">About Me</a></li>
-      <li><a href="../photos.html" class="nav-link">Photos</a></li>
-      <li><a href="../quips.html" class="nav-link">Quips</a></li>
-    </ul>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <nav id="navbar" data-active="about" data-root=".."></nav>
 
-  <main class="detail-page" data-animate="fade-up">
+<main class="detail-page" data-animate="fade-up">
     <a href="../about.html" class="detail-back">&larr; Back to About Me</a>
 
-    <h1 class="detail-title">Software Engineering Intern</h1>
-    <p class="detail-subtitle">2021 &ndash; 2022 &middot; Tech Co</p>
+    <h1 class="detail-title">Data Science Intern</h1>
+    <p class="detail-subtitle">May &ndash; August 2023 &middot; PT. Bank Central Asia &middot; Jakarta, Indonesia</p>
 
     <div class="detail-section">
       <h2>Role Overview</h2>
-      <p>A summer + fall internship focused on backend API development. I was embedded in a mid-size team working on a customer-facing REST API that served millions of requests daily.</p>
+      <p>Summer internship at one of Indonesia's largest private banks, working within the data science division. I built interactive dashboards, automated data engineering pipelines, and applied NLP techniques to streamline customer classification processes.</p>
     </div>
 
     <div class="detail-section">
       <h2>Key Responsibilities</h2>
       <ul>
-        <li>Wrote and maintained integration tests for core API endpoints</li>
-        <li>Fixed production bugs and participated in incident triage</li>
-        <li>Built a caching layer that improved response times by 35%</li>
-        <li>Presented capstone project to engineering leadership</li>
+        <li>Performed data modeling, dashboard creation, and visualization tasks utilizing QlikSense</li>
+        <li>Collaborated with team members to develop interactve dashboards that incorporated dynamic graphical elements, facilitating user engagement and deeper data exploration</li>
+        <li>Facilitated data engineering tasks, employing ETL processes for data lake refinement through Informatica Developer and Informatica Power Center</li>
+        <li>Constructed and optimized Docker environments for Swift and Jupyter notebooks</li>
+        <li>Leveraged NLP techniques and Text Classification algorithms to successfully automate customer classification</li>
       </ul>
-    </div>
-
-    <div class="detail-section">
-      <h2>What I Learned</h2>
-      <p>This was my first experience working in a professional engineering environment. I learned how to read and navigate a large codebase, write meaningful tests, and communicate technical decisions clearly in code reviews.</p>
     </div>
 
     <div class="detail-section">
       <h2>Tools &amp; Technologies</h2>
       <div class="detail-meta">
-        <span class="tag">Java</span>
-        <span class="tag">Spring Boot</span>
-        <span class="tag">Redis</span>
-        <span class="tag">JUnit</span>
-        <span class="tag">Git</span>
+        <span class="tag">Qlik Sense</span>
+        <span class="tag">Informatica</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Python</span>
+        <span class="tag">NLP</span>
+        <span class="tag">Jupyter</span>
       </div>
     </div>
   </main>
 
-  <footer id="footer">
-    <p>&copy; 2026 Cecilia Aiko &middot; Built from scratch with HTML, CSS &amp; JS</p>
-  </footer>
+  <footer id="footer"></footer>
 
+<script src="../js/components.js"></script>
   <script src="../js/app.js"></script>
 </body>
 </html>

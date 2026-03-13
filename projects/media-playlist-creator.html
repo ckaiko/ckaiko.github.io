@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediaPlaylistCreator &mdash; Cecilia Aiko</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="site-blobs" class="bg-blobs" aria-hidden="true"></div>
+
+  <nav id="navbar" data-active="projects" data-root=".."></nav>
+
+<main class="detail-page" data-animate="fade-up">
+    <a href="../projects.html" class="detail-back">&larr; Back to Projects</a>
+
+    <h1 class="detail-title">MediaPlaylistCreator</h1>
+    <p class="detail-subtitle">Movie &amp; Song Playlist Recommender powered by AI embeddings</p>
+
+    <div class="detail-meta">
+      <span class="tag">Python</span>
+      <span class="tag">Streamlit</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">OpenAI</span>
+      <span class="tag">Spotify API</span>
+      <span class="tag">Docker</span>
+    </div>
+
+    <div class="detail-section">
+      <h2>Overview</h2>
+      <p>MediaPlaylistCreator is a full-stack Python application that generates personalized movie and song playlist recommendations. It pulls viewing history from Letterboxd via RSS, matches musical moods using the Spotify API, and leverages OpenAI embeddings for semantic similarity matching.</p>
+      <p>The project features a Streamlit dashboard for exploring recommendations, a PostgreSQL backend for storing user data and embeddings, and Docker for reproducible deployments.</p>
+    </div>
+
+    <div class="detail-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Letterboxd RSS integration to import movie watch history automatically</li>
+        <li>Spotify API integration for song metadata, audio features, and playlist generation</li>
+        <li>OpenAI embeddings for semantic similarity&mdash;matching movie moods to songs</li>
+        <li>PostgreSQL database for persistent storage of user profiles and recommendation history</li>
+        <li>Interactive Streamlit dashboard for browsing and refining recommendations</li>
+        <li>Fully containerized with Docker for easy setup and deployment</li>
+      </ul>
+    </div>
+
+    <div class="detail-section">
+      <h2>What I Learned</h2>
+      <p>This project deepened my understanding of embedding-based recommendation systems, API rate limiting strategies, and building interactive data apps with Streamlit. It also gave me hands-on experience with vector similarity search and PostgreSQL performance tuning.</p>
+    </div>
+
+    <a href="https://github.com/ckaiko/MediaPlaylistCreator" target="_blank" rel="noopener" class="card-link" style="font-size:1rem;">View on GitHub &rarr;</a>
+  </main>
+
+  <footer id="footer"></footer>
+
+<script src="../js/components.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

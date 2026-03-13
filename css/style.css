@@ -794,14 +794,17 @@ nav, section, footer { position: relative; z-index: 1; }
 
 /* Clickable cards on listing pages */
 a.card,
-a.photo-card { color: inherit; text-decoration: none; display: block; }
+a.photo-card,
+a.blog-card { color: inherit; text-decoration: none; display: block; }
 .card.clickable,
 .photo-card.clickable,
+.blog-card.clickable,
 .timeline-item.clickable .timeline-content {
   cursor: pointer;
 }
 .card.clickable:hover,
-.photo-card.clickable:hover {
+.photo-card.clickable:hover,
+.blog-card.clickable:hover {
   transform: translateY(-4px);
 }
 .timeline-item.clickable:hover .timeline-content {
@@ -810,6 +813,43 @@ a.photo-card { color: inherit; text-decoration: none; display: block; }
 }
 
 ::selection { background: var(--accent); color: #fff; }
+
+/* ── Empty state ── */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  opacity: .7;
+}
+.empty-state-text {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* ── Back to Home button (footer) ── */
+.back-home-wrap {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.btn-secondary {
+  display: inline-block;
+  padding: .65rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  background: transparent;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
 
 ::-webkit-scrollbar { width: 7px; }
 ::-webkit-scrollbar-track { background: var(--bg); }

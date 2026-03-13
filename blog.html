@@ -10,120 +10,24 @@
 </head>
 <body>
 
-  <div class="bg-blobs" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
-  </div>
+  <div id="site-blobs" class="bg-blobs" aria-hidden="true"></div>
 
-  <nav id="navbar">
-    <a href="index.html" class="nav-logo">Cecilia Aiko</a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="projects.html" class="nav-link">Projects</a></li>
-      <li><a href="blog.html" class="nav-link active">Blog</a></li>
-      <li><a href="about.html" class="nav-link">About Me</a></li>
-      <li><a href="photos.html" class="nav-link">Photos</a></li>
-      <li><a href="quips.html" class="nav-link">Quips</a></li>
-    </ul>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <nav id="navbar" data-active="blog" data-root="."></nav>
 
-  <header class="page-header">
+<header class="page-header">
     <h1 data-animate="fade-up">Blog Posts</h1>
     <p data-animate="fade-up">Thoughts, tutorials, and deep dives</p>
   </header>
 
   <section class="section">
     <div class="container">
-      <div class="blog-list">
-
-        <article class="blog-card window" data-animate="slide-left">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">blog-post.md</span>
-          </div>
-          <div class="blog-inner">
-            <div class="blog-date">Mar 10, 2026</div>
-            <h3 class="blog-title">Building a Portfolio From Scratch</h3>
-            <p class="blog-excerpt">A step-by-step walkthrough of how I built this site using vanilla HTML, CSS, and JS. Covers the design process, CSS custom properties for theming, scroll-reveal animations, and deploying without a framework.</p>
-            <a href="https://medium.com/@ckaiko/building-a-portfolio-from-scratch" target="_blank" rel="noopener" class="blog-read-more">Read on Medium &rarr;</a>
-          </div>
-        </article>
-
-        <article class="blog-card window" data-animate="slide-left">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">agile-thoughts.md</span>
-          </div>
-          <div class="blog-inner">
-            <div class="blog-date">Feb 22, 2026</div>
-            <h3 class="blog-title">What Makes a Sprint Actually Work</h3>
-            <p class="blog-excerpt">Reflections on running effective sprints after two years of managing dev teams. Covers realistic scoping, the art of the standup, and why retros matter more than you think.</p>
-            <a href="https://medium.com/@ckaiko/what-makes-a-sprint-actually-work" target="_blank" rel="noopener" class="blog-read-more">Read on Medium &rarr;</a>
-          </div>
-        </article>
-
-        <article class="blog-card window" data-animate="slide-left">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">open-source.md</span>
-          </div>
-          <div class="blog-inner">
-            <div class="blog-date">Jan 15, 2026</div>
-            <h3 class="blog-title">Lessons From My First Open Source PR</h3>
-            <p class="blog-excerpt">What I learned contributing to a large codebase for the first time &mdash; reading someone else's architecture, writing a good PR description, handling feedback, and tips for newcomers.</p>
-            <a href="https://medium.com/@ckaiko/lessons-from-my-first-open-source-pr" target="_blank" rel="noopener" class="blog-read-more">Read on Medium &rarr;</a>
-          </div>
-        </article>
-
-        <article class="blog-card window" data-animate="slide-left">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">css-variables.md</span>
-          </div>
-          <div class="blog-inner">
-            <div class="blog-date">Dec 5, 2025</div>
-            <h3 class="blog-title">CSS Custom Properties Changed How I Theme</h3>
-            <p class="blog-excerpt">How I moved from Sass variables to native CSS custom properties and never looked back. Includes a dark-mode-ready theming pattern anyone can copy.</p>
-            <a href="https://medium.com/@ckaiko/css-custom-properties-changed-how-i-theme" target="_blank" rel="noopener" class="blog-read-more">Read on Medium &rarr;</a>
-          </div>
-        </article>
-
-        <article class="blog-card window" data-animate="slide-left">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">pm-or-dev.md</span>
-          </div>
-          <div class="blog-inner">
-            <div class="blog-date">Nov 18, 2025</div>
-            <h3 class="blog-title">PM or Dev? Why I Chose Both</h3>
-            <p class="blog-excerpt">The case for wearing both hats, the trade-offs involved, and how context-switching between code and coordination actually makes me better at each.</p>
-            <a href="https://medium.com/@ckaiko/pm-or-dev-why-i-chose-both" target="_blank" rel="noopener" class="blog-read-more">Read on Medium &rarr;</a>
-          </div>
-        </article>
-
-      </div>
+      <div id="blog-list"></div>
     </div>
   </section>
 
-  <footer id="footer">
-    <p>&copy; 2026 Cecilia Aiko &middot; Built from scratch with HTML, CSS &amp; JS</p>
-  </footer>
+  <footer id="footer"></footer>
 
+<script src="js/components.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

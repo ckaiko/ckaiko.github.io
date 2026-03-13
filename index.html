@@ -10,263 +10,93 @@
 </head>
 <body>
 
-  <!-- Soft animated blob background -->
-  <div class="bg-blobs" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
-  </div>
+  <div id="site-blobs" class="bg-blobs" aria-hidden="true"></div>
 
-  <!-- NAVIGATION -->
-  <nav id="navbar">
-    <a href="index.html" class="nav-logo">Cecilia Aiko</a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-link active">Home</a></li>
-      <li><a href="projects.html" class="nav-link">Projects</a></li>
-      <li><a href="blog.html" class="nav-link">Blog</a></li>
-      <li><a href="about.html" class="nav-link">About Me</a></li>
-      <li><a href="photos.html" class="nav-link">Photos</a></li>
-      <li><a href="quips.html" class="nav-link">Quips</a></li>
-    </ul>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <nav id="navbar" data-active="home" data-root="."></nav>
 
-  <!-- HERO -->
+<!-- HERO -->
   <section id="hero">
     <div class="hero-content" data-animate="fade-up">
       <p class="hero-greeting">Hello, I'm</p>
       <h1 class="hero-name">Cecilia Aiko</h1>
-      <p class="hero-tagline">
-        <span id="typed-text"></span><span class="cursor">|</span>
-      </p>
-      <a href="projects.html" class="btn btn-primary">View My Work</a>
+      <p class="hero-tagline">Software Data Operations Engineer and UC Berkeley CS grad who loves building things at the intersection of data, design, and great teamwork.</p>
+
+      <div class="social-links" style="justify-content:center; margin-top:1.2rem;">
+        <a href="https://github.com/ckaiko" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/ceciliaaiko" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:ckaiko0606@gmail.com" class="social-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"/><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"/></svg>
+          Email
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- PROJECTS PREVIEW -->
+  <!-- 1. EXPERIENCE PREVIEW -->
   <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-animate="fade-up">Experience</h2>
+
+      <!-- JS fills from SITE_DATA.experiences (first 2 work entries) -->
+      <div id="home-timeline"></div>
+      <a href="about.html" class="see-all">Learn more about me &rarr;</a>
+    </div>
+  </section>
+
+  <!-- 2. PROJECTS PREVIEW -->
+  <section class="section section-alt">
     <div class="container">
       <h2 class="section-title" data-animate="fade-up">Coding Projects</h2>
       <p class="section-subtitle" data-animate="fade-up">Things I've built and tinkered with</p>
 
-      <div class="card-grid">
-        <div class="card window tilt-card" data-animate="fade-up">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">project-alpha.tsx</span>
-          </div>
-          <div class="card-image" style="background: linear-gradient(135deg, #a8b396, #8fa07c);">
-            <span class="card-icon">&#128187;</span>
-          </div>
-          <div class="card-body">
-            <h3>Project Alpha</h3>
-            <p>A full-stack web app built with Node.js and React. Features real-time data syncing.</p>
-            <div class="card-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">WebSockets</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card window tilt-card" data-animate="fade-up">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">cli-toolkit.py</span>
-          </div>
-          <div class="card-image" style="background: linear-gradient(135deg, #9aa88a, #8a9b78);">
-            <span class="card-icon">&#128295;</span>
-          </div>
-          <div class="card-body">
-            <h3>CLI Toolkit</h3>
-            <p>A developer CLI that automates repetitive tasks &mdash; scaffolding, linting, deployment.</p>
-            <div class="card-tags">
-              <span class="tag">Python</span>
-              <span class="tag">CLI</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- JS fills from SITE_DATA.projects (first 2) -->
+      <div id="home-projects"></div>
       <a href="projects.html" class="see-all">See all projects &rarr;</a>
     </div>
   </section>
 
-  <!-- BLOG PREVIEW -->
+  <!-- 3. MEDIA PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-animate="fade-up">Media</h2>
+      <p class="section-subtitle" data-animate="fade-up">Photos, videos, and moments I've captured</p>
+
+      <div id="home-media"></div>
+      <a href="photos.html" class="see-all">View all media &rarr;</a>
+    </div>
+  </section>
+
+  <!-- 4. BLOG PREVIEW -->
   <section class="section section-alt">
     <div class="container">
       <h2 class="section-title" data-animate="fade-up">Blog Posts</h2>
       <p class="section-subtitle" data-animate="fade-up">Thoughts, tutorials, and deep dives</p>
 
-      <div class="blog-list">
-        <article class="blog-card window" data-animate="slide-left">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">blog-post.md</span>
-          </div>
-          <div class="blog-inner">
-            <div class="blog-date">Mar 10, 2026</div>
-            <h3 class="blog-title">Building a Portfolio From Scratch</h3>
-            <p class="blog-excerpt">A step-by-step walkthrough of how I built this site using vanilla HTML, CSS, and JS&hellip;</p>
-          </div>
-        </article>
-
-        <article class="blog-card window" data-animate="slide-left">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">agile-thoughts.md</span>
-          </div>
-          <div class="blog-inner">
-            <div class="blog-date">Feb 22, 2026</div>
-            <h3 class="blog-title">What Makes a Sprint Actually Work</h3>
-            <p class="blog-excerpt">Reflections on running effective sprints after two years of managing dev teams&hellip;</p>
-          </div>
-        </article>
-      </div>
+      <div id="home-blog"></div>
       <a href="blog.html" class="see-all">Read all posts &rarr;</a>
     </div>
   </section>
 
-  <!-- ABOUT ME PREVIEW -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title" data-animate="fade-up">About Me</h2>
-      <p class="section-subtitle" data-animate="fade-up">A little bit about who I am</p>
-
-      <div class="about-intro" data-animate="fade-up">
-        <p>I'm <strong>Cecilia Aiko</strong> &mdash; a project manager and developer who loves building things at the intersection of clean code and great teamwork. By day I lead engineering squads; by night I ship side projects and collect vintage things.</p>
-
-        <div class="social-links">
-          <a href="https://github.com/ckaiko" target="_blank" rel="noopener" class="social-link">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
-          <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener" class="social-link">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-        </div>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item" data-animate="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2024 &ndash; Present</span>
-            <h3>Project Manager / Developer @ Company</h3>
-            <p>Leading cross-functional squads, coordinating roadmaps, and still shipping code on nights and weekends.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-animate="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2022 &ndash; 2024</span>
-            <h3>Software Developer @ Startup</h3>
-            <p>Built internal tools and customer-facing features. Wore many hats in a small, fast-moving team.</p>
-          </div>
-        </div>
-      </div>
-      <a href="about.html" class="see-all">Learn more about me &rarr;</a>
-    </div>
-  </section>
-
-  <!-- PHOTOS PREVIEW -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title" data-animate="fade-up">Photos</h2>
-      <p class="section-subtitle" data-animate="fade-up">Moments I've captured</p>
-
-      <div class="photo-grid">
-        <div class="photo-card tilt-card" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#a8b396,#8fa07c);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Golden hour at the old train station</p>
-            <div class="photo-meta">
-              <span class="photo-location">Portland, OR</span>
-              <span class="photo-date">Dec 2025</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="photo-card tilt-card" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#8e9f7e,#7d9168);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Morning fog over the bridge</p>
-            <div class="photo-meta">
-              <span class="photo-location">San Francisco, CA</span>
-              <span class="photo-date">Oct 2025</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="photo-card tilt-card" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#9aa88a,#8a9b78);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Bookshelves at the vintage market</p>
-            <div class="photo-meta">
-              <span class="photo-location">Austin, TX</span>
-              <span class="photo-date">Aug 2025</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="photos.html" class="see-all">View all photos &rarr;</a>
-    </div>
-  </section>
-
-  <!-- QUIPS PREVIEW -->
+  <!-- 5. QUIPS PREVIEW -->
   <section class="section">
     <div class="container">
       <h2 class="section-title" data-animate="fade-up">Quips &amp; Updates</h2>
       <p class="section-subtitle" data-animate="fade-up">Short thoughts and status drops</p>
 
-      <div class="quips-feed">
-        <div class="quip window" data-animate="fade-up">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">latest.txt</span>
-          </div>
-          <div class="quip-inner">
-            <div class="quip-meta"><span class="quip-date">Mar 13, 2026</span></div>
-            <p class="quip-text">Just shipped the new portfolio site &mdash; you're looking at it!</p>
-          </div>
-        </div>
-
-        <div class="quip window" data-animate="fade-up">
-          <div class="window-bar">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-            <span class="window-bar-title">update.txt</span>
-          </div>
-          <div class="quip-inner">
-            <div class="quip-meta"><span class="quip-date">Mar 8, 2026</span></div>
-            <p class="quip-text">Wrapped up sprint planning for Q2. The roadmap is looking ambitious but doable.</p>
-          </div>
-        </div>
-      </div>
+      <div id="home-quips"></div>
       <a href="quips.html" class="see-all">Read all quips &rarr;</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="footer">
-    <p>&copy; 2026 Cecilia Aiko &middot; Built from scratch with HTML, CSS &amp; JS</p>
-  </footer>
+  <footer id="footer"></footer>
 
+<script src="js/components.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

@@ -3,118 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photos &mdash; Cecilia Aiko</title>
+  <title>Media &mdash; Cecilia Aiko</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <div class="bg-blobs" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
-  </div>
+  <div id="site-blobs" class="bg-blobs" aria-hidden="true"></div>
 
-  <nav id="navbar">
-    <a href="index.html" class="nav-logo">Cecilia Aiko</a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="projects.html" class="nav-link">Projects</a></li>
-      <li><a href="blog.html" class="nav-link">Blog</a></li>
-      <li><a href="about.html" class="nav-link">About Me</a></li>
-      <li><a href="photos.html" class="nav-link active">Photos</a></li>
-      <li><a href="quips.html" class="nav-link">Quips</a></li>
-    </ul>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <nav id="navbar" data-active="media" data-root="."></nav>
 
-  <header class="page-header">
-    <h1 data-animate="fade-up">Photos</h1>
-    <p data-animate="fade-up">Moments I've captured</p>
+<header class="page-header">
+    <h1 data-animate="fade-up">Media</h1>
+    <p data-animate="fade-up">Photos, videos, and moments I've captured</p>
   </header>
 
   <section class="section">
     <div class="container">
-      <div class="photo-grid">
-
-        <a href="photos/train-station.html" class="photo-card tilt-card clickable" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#a8b396,#8fa07c);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Golden hour at the old train station</p>
-            <div class="photo-meta">
-              <span class="photo-location">Portland, OR</span>
-              <span class="photo-date">Dec 2025</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="photos/bridge-fog.html" class="photo-card tilt-card clickable" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#9aad88,#b5c3a3);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Morning fog over the bridge</p>
-            <div class="photo-meta">
-              <span class="photo-location">San Francisco, CA</span>
-              <span class="photo-date">Oct 2025</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="photos/vintage-market.html" class="photo-card tilt-card clickable" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#b0a88e,#c4b99a);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Bookshelves at the vintage market</p>
-            <div class="photo-meta">
-              <span class="photo-location">Austin, TX</span>
-              <span class="photo-date">Aug 2025</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="photos/record-shop.html" class="photo-card tilt-card clickable" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#97a886,#aab89b);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Late afternoon at the record shop</p>
-            <div class="photo-meta">
-              <span class="photo-location">Seattle, WA</span>
-              <span class="photo-date">Jun 2025</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="photos/countryside.html" class="photo-card tilt-card clickable" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#8fa07c,#a8b396);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Road trip through the countryside</p>
-            <div class="photo-meta">
-              <span class="photo-location">Blue Ridge Pkwy, NC</span>
-              <span class="photo-date">Apr 2025</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="photos/typewriter-cafe.html" class="photo-card tilt-card clickable" data-animate="zoom-in">
-          <div class="photo-placeholder" style="background: linear-gradient(135deg,#9aad88,#b0a88e);"></div>
-          <div class="photo-info">
-            <p class="photo-caption">Typewriter collection at the cafe</p>
-            <div class="photo-meta">
-              <span class="photo-location">Brooklyn, NY</span>
-              <span class="photo-date">Feb 2025</span>
-            </div>
-          </div>
-        </a>
-
-      </div>
+      <div id="photos-grid"></div>
     </div>
   </section>
 
-  <footer id="footer">
-    <p>&copy; 2026 Cecilia Aiko &middot; Built from scratch with HTML, CSS &amp; JS</p>
-  </footer>
+  <footer id="footer"></footer>
 
+<script src="js/components.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

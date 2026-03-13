@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Explorer &mdash; Cecilia Aiko</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="site-blobs" class="bg-blobs" aria-hidden="true"></div>
+
+  <nav id="navbar" data-active="projects" data-root=".."></nav>
+
+<main class="detail-page" data-animate="fade-up">
+    <a href="../projects.html" class="detail-back">&larr; Back to Projects</a>
+
+    <h1 class="detail-title">World Explorer</h1>
+    <p class="detail-subtitle">A 2D procedurally-generated exploration game built in Java</p>
+
+    <div class="detail-meta">
+      <span class="tag">Java</span>
+      <span class="tag">Game Dev</span>
+      <span class="tag">Procedural Generation</span>
+      <span class="tag">2D Graphics</span>
+    </div>
+
+    <div class="detail-section">
+      <h2>Overview</h2>
+      <p>World Explorer is a 2D tile-based exploration game written entirely in Java. The game procedurally generates unique worlds each playthrough using randomized algorithms, creating explorable environments with rooms, hallways, and interactive elements.</p>
+      <p>Built as part of the BYOW (Build Your Own World) project, it demonstrates core concepts in procedural generation, data structures, and 2D rendering.</p>
+    </div>
+
+    <div class="detail-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Procedurally generated 2D worlds with unique layouts on each run</li>
+        <li>Tile-based rendering engine for rooms, corridors, and obstacles</li>
+        <li>Player movement and world interaction mechanics</li>
+        <li>Seed-based generation for reproducible world states</li>
+        <li>Save and load game state functionality</li>
+      </ul>
+    </div>
+
+    <div class="detail-section">
+      <h2>What I Learned</h2>
+      <p>This project was a deep dive into procedural content generation, graph algorithms for room connectivity, and managing game state in Java. It also strengthened my understanding of object-oriented design patterns and tile-based rendering.</p>
+    </div>
+
+    <a href="https://github.com/ckaiko/World-Explorer" target="_blank" rel="noopener" class="card-link" style="font-size:1rem;">View on GitHub &rarr;</a>
+  </main>
+
+  <footer id="footer"></footer>
+
+<script src="../js/components.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
