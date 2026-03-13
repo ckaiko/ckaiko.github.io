@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Alpha &mdash; Cecilia Aiko</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <nav id="navbar">
+    <a href="../index.html" class="nav-logo">Cecilia Aiko</a>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+      <li><a href="../blog.html" class="nav-link">Blog</a></li>
+      <li><a href="../about.html" class="nav-link">About Me</a></li>
+      <li><a href="../photos.html" class="nav-link">Photos</a></li>
+      <li><a href="../quips.html" class="nav-link">Quips</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="detail-page" data-animate="fade-up">
+    <a href="../projects.html" class="detail-back">&larr; Back to Projects</a>
+
+    <h1 class="detail-title">Project Alpha</h1>
+    <p class="detail-subtitle">A full-stack web app with real-time data syncing</p>
+
+    <div class="detail-meta">
+      <span class="tag">React</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">WebSockets</span>
+      <span class="tag">JWT</span>
+      <span class="tag">PostgreSQL</span>
+    </div>
+
+    <div class="detail-section">
+      <h2>Overview</h2>
+      <p>Project Alpha is a full-stack web application built with Node.js and React. It features real-time data syncing via WebSockets, user authentication with JWT tokens, and a responsive dashboard for monitoring live metrics.</p>
+      <p>The project started as a weekend hack and grew into a production tool used by a small team of 12. It handles ~500 concurrent WebSocket connections with sub-100ms latency.</p>
+    </div>
+
+    <div class="detail-section">
+      <h2>Screenshots</h2>
+      <!-- Replace these placeholders with real screenshots:
+           <img src="../images/project-alpha-1.png" alt="Dashboard view" /> -->
+      <div class="screenshot-grid">
+        <div class="screenshot-placeholder" style="background: linear-gradient(135deg, #a8b396, #8fa07c);">screenshot-1.png</div>
+        <div class="screenshot-placeholder" style="background: linear-gradient(135deg, #9aa88a, #8a9b78);">screenshot-2.png</div>
+        <div class="screenshot-placeholder" style="background: linear-gradient(135deg, #8e9f7e, #7d9168);">screenshot-3.png</div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Real-time dashboard with live-updating charts (D3.js + WebSockets)</li>
+        <li>JWT-based authentication with refresh token rotation</li>
+        <li>PostgreSQL database with Prisma ORM</li>
+        <li>Responsive design that works on mobile and desktop</li>
+        <li>Automated CI/CD pipeline with GitHub Actions</li>
+      </ul>
+    </div>
+
+    <div class="detail-section">
+      <h2>What I Learned</h2>
+      <p>This project taught me a lot about managing WebSocket connections at scale, structuring a monorepo for frontend and backend code, and writing meaningful integration tests. It was also my first time deploying to AWS with Terraform.</p>
+    </div>
+
+    <a href="https://github.com/ckaiko/project-alpha" target="_blank" rel="noopener" class="card-link" style="font-size:1rem;">View on GitHub &rarr;</a>
+  </main>
+
+  <footer id="footer">
+    <p>&copy; 2026 Cecilia Aiko &middot; Built from scratch with HTML, CSS &amp; JS</p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
