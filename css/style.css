@@ -534,26 +534,7 @@ nav, section, footer { position: relative; z-index: 1; }
   content: '\1F4C5 ';
 }
 
-/* =============================================
-   QUIPS / UPDATES
-   ============================================= */
-.quips-feed {
-  max-width: 620px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
 
-.quip {
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.quip:hover { transform: translateY(-2px); }
-.quip .quip-inner { padding: 1rem 1.25rem; }
-
-.quip-meta { margin-bottom: .25rem; }
-.quip-date { font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono); }
-.quip-text { font-size: .95rem; color: var(--text); }
 
 /* =============================================
    FOOTER
@@ -824,6 +805,99 @@ a.blog-card { color: inherit; text-decoration: none; display: block; }
   font-family: var(--font-mono);
   font-size: 1.1rem;
   color: var(--text-muted);
+}
+
+/* ── Now page — media shelf cards ── */
+.now-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.now-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.now-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.now-card-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: linear-gradient(135deg, #a8b396, #8fa07c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 2rem;
+}
+.now-card-poster--book {
+  aspect-ratio: 2/3;
+}
+.now-card-body {
+  padding: .9rem 1rem 1rem;
+}
+.now-card-body h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: .25rem;
+  line-height: 1.3;
+}
+.now-year {
+  font-weight: 400;
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+.now-rating {
+  display: block;
+  font-size: .9rem;
+  margin-bottom: .25rem;
+  color: var(--dot-yellow);
+  letter-spacing: 1px;
+}
+.now-meta {
+  display: block;
+  font-size: .82rem;
+  color: var(--text-muted);
+  margin-bottom: .25rem;
+  font-family: var(--font-mono);
+}
+.now-note {
+  font-size: .82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: .3rem;
+  line-height: 1.45;
+}
+
+/* Spotify embed grid */
+.now-spotify-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+.now-spotify {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.now-spotify .now-note {
+  padding: .5rem .2rem 0;
+}
+
+@media (max-width: 600px) {
+  .now-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+  .now-spotify-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Back to Home button (footer) ── */
