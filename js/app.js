@@ -110,10 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navToggle && navLinksUl) {
     navToggle.addEventListener('click', () => {
       navLinksUl.classList.toggle('open');
+      navToggle.classList.toggle('active');
     });
     navLinksUl.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navLinksUl.classList.remove('open');
+        navToggle.classList.remove('active');
       });
     });
   }
