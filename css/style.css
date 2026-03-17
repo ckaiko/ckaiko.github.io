@@ -833,6 +833,7 @@ a.blog-card { color: inherit; text-decoration: none; display: block; }
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1.5rem;
   margin-bottom: 1rem;
+  justify-content: center;
 }
 .now-card {
   background: var(--surface);
@@ -855,6 +856,13 @@ a.blog-card { color: inherit; text-decoration: none; display: block; }
   justify-content: center;
   color: var(--text-muted);
   font-size: 2rem;
+  overflow: hidden;
+}
+.now-card-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .now-card-poster--book {
   aspect-ratio: 2/3;
@@ -895,28 +903,42 @@ a.blog-card { color: inherit; text-decoration: none; display: block; }
   line-height: 1.45;
 }
 
-/* Spotify embed grid */
-.now-spotify-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.2rem;
-  margin-bottom: 1rem;
+/* Now page — loading & source */
+.now-loading {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: .88rem;
+  color: var(--text-muted);
+  padding: 2rem 0;
+  opacity: .7;
 }
-.now-spotify {
-  border-radius: 12px;
-  overflow: hidden;
+.now-source {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--text-muted);
+  margin-top: 1.2rem;
+  opacity: .6;
 }
-.now-spotify .now-note {
-  padding: .5rem .2rem 0;
+.now-source a { color: var(--accent); }
+
+/* Clickable film cards (Letterboxd links) */
+a.now-card { color: inherit; text-decoration: none; display: block; }
+a.now-card--link:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+/* Now subsection headers */
+.now-subsection {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--text);
+  margin: 2rem 0 .8rem;
 }
+.now-subsection:first-child { margin-top: 0; }
 
 @media (max-width: 600px) {
   .now-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 1rem;
-  }
-  .now-spotify-grid {
-    grid-template-columns: 1fr;
   }
 }
 

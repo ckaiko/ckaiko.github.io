@@ -1,0 +1,34 @@
+{
+  "updatedAt": "2026-03-17T18:36:32.291Z",
+  "user": "ckaiko",
+  "films": [
+    {
+      "title": "Uncut Gems",
+      "year": "2019",
+      "poster": "data/posters/uncut-gems.jpg",
+      "rating": "★★★½",
+      "link": "https://letterboxd.com/ckaiko/film/uncut-gems/"
+    },
+    {
+      "title": "The Favourite",
+      "year": "2018",
+      "poster": "data/posters/the-favourite.jpg",
+      "rating": "★★★½",
+      "link": "https://letterboxd.com/ckaiko/film/the-favourite/"
+    },
+    {
+      "title": "Love Actually",
+      "year": "2003",
+      "poster": "data/posters/love-actually.jpg",
+      "rating": "★★½",
+      "link": "https://letterboxd.com/ckaiko/film/love-actually/"
+    },
+    {
+      "title": "The Talented Mr. Ripley",
+      "year": "1999",
+      "poster": "data/posters/the-talented-mr-ripley.jpg",
+      "rating": "★★★★",
+      "link": "https://letterboxd.com/ckaiko/film/the-talented-mr-ripley/"
+    }
+  ]
+}
