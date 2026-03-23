@@ -17,37 +17,46 @@
 <main class="detail-page" data-animate="fade-up">
     <a href="../projects.html" class="detail-back">&larr; Back to Projects</a>
 
-    <h1 class="detail-title">TedStem</h1>
-    <p class="detail-subtitle">AI Hacks 2024 hackathon project</p>
+    <h1 class="detail-title">Tedstem</h1>
+    <p class="detail-subtitle">Utilizing AI to enhance student-instructor communication and address learning gaps effectively</p>
 
     <div class="detail-meta">
       <span class="tag">TypeScript</span>
+      <span class="tag">React</span>
       <span class="tag">Python</span>
-      <span class="tag">AI / ML</span>
+      <span class="tag">Flask</span>
+      <span class="tag">AWS Bedrock</span>
+      <span class="tag">Docker</span>
       <span class="tag">Hackathon</span>
     </div>
 
     <div class="detail-section">
       <h2>Overview</h2>
-      <p>TedStem is a project built for AI Hacks 2024, combining TypeScript and Python to create an AI-powered application. The dual-language architecture leverages TypeScript for the application layer and Python for the AI/ML backend processing.</p>
+      <p>Tedstem enhances student-instructor communication, allowing students to post questions and TAs to receive reports on common confusions to address learning gaps effectively. Born from the desire to easily identify and address student learning challenges within school discussion board platforms, we wanted a tool that would make it simple for educators to pinpoint where students were struggling and improve the quality of teaching discussions.</p>
+      <p>We built a toy schema of the PostgreSQL database, set up the ORM with SQLAlchemy, used Docker to speed up the database locally, built RESTful APIs, connected our front-end with AWS Bedrock, and recursively created posts through React and Next.js.</p>
+    </div>
+
+    <div class="detail-section detail-images">
+      <img src="images/tedstem1.jpg" alt="Tedstem screenshot 1" />
+      <img src="images/tedstem2.jpg" alt="Tedstem screenshot 2" />
     </div>
 
     <div class="detail-section">
       <h2>Key Features</h2>
       <ul>
-        <li>Built during AI Hacks 2024 hackathon</li>
-        <li>Dual-language architecture: TypeScript (48.9%) and Python (46.7%)</li>
-        <li>AI/ML pipeline integrated into the application workflow</li>
-        <li>Rapid prototyping under hackathon constraints</li>
+        <li><strong>Text classification</strong> &mdash; categorizes posts and replies into relevant class topics</li>
+        <li><strong>Sentiment analysis</strong> &mdash; gauges student comprehension on each topic</li>
+        <li><strong>Discussion summarization</strong> &mdash; summarizes students&rsquo; discussions and provides detailed insights for instructors on identified weak points</li>
       </ul>
     </div>
 
     <div class="detail-section">
-      <h2>What I Learned</h2>
-      <p>This hackathon pushed me to rapidly prototype an AI-powered solution under tight time constraints. Working across TypeScript and Python in a single project taught me about managing polyglot codebases and integrating ML models into application pipelines.</p>
+      <h2>Challenges &amp; What I Learned</h2>
+      <p>We faced problems dealing with the frontend, especially the recursive post rendering. We also had difficulties setting up and trying out different models in AWS at first, but after careful reading we managed to figure both problems out.</p>
+      <p>We learned a lot about how to think about solving a problem by exploring the stakeholders&mdash;students, teachers, administrators, and many more. As a team of educators, we know the importance of knowing student weak points and addressing that problem. We&rsquo;re proud that we could create a study platform that could potentially help educators teach better.</p>
     </div>
 
-    <a href="https://github.com/ckaiko/tedstem" target="_blank" rel="noopener" class="card-link" style="font-size:1rem;">View on GitHub &rarr;</a>
+    <a href="https://github.com/michaelwiradharma/ai-hacks-2024" target="_blank" rel="noopener" class="card-link" style="font-size:1rem;">View on GitHub &rarr;</a>
   </main>
 
   <footer id="footer"></footer>

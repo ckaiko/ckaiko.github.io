@@ -382,6 +382,9 @@ nav, section, footer { position: relative; z-index: 1; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+  justify-content: center;
+  max-width: 1020px;
+  margin: 0 auto;
 }
 
 .card .card-image {
@@ -417,6 +420,11 @@ nav, section, footer { position: relative; z-index: 1; }
   background: rgba(122,99,64,.12);
   color: var(--accent);
   font-weight: 600;
+}
+
+.tag-status {
+  background: rgba(200,150,50,.18);
+  color: #b8860b;
 }
 
 /* =============================================
@@ -728,6 +736,18 @@ nav, section, footer { position: relative; z-index: 1; }
 
 .detail-section ul li {
   margin-bottom: .3rem;
+}
+
+.detail-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.detail-images img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.12);
 }
 
 .detail-meta {

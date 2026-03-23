@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeMeal &mdash; Cecilia Aiko</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="site-blobs" class="bg-blobs" aria-hidden="true"></div>
+
+  <nav id="navbar" data-active="projects" data-root=".."></nav>
+
+<main class="detail-page" data-animate="fade-up">
+    <a href="../projects.html" class="detail-back">&larr; Back to Projects</a>
+
+    <h1 class="detail-title">BeMeal</h1>
+    <p class="detail-subtitle">A BeReal-inspired food diary app for capturing daily meals with photos</p>
+
+    <div class="detail-meta">
+      <span class="tag">Swift</span>
+      <span class="tag">SwiftUI</span>
+      <span class="tag">UIKit</span>
+      <span class="tag">iOS</span>
+      <span class="tag">MVVM</span>
+      <span class="tag">FileManager</span>
+      <span class="tag tag-status">In Progress</span>
+    </div>
+
+    <div class="detail-section">
+      <h2>Overview</h2>
+      <p>BeMeal is an iOS food diary app inspired by BeReal that lets users visually document their daily meals, snacks, and drinks through photos. Each entry is captured with a timestamp, an optional caption, and a color-coded category, making it easy to look back on eating habits over time.</p>
+      <p>The app features a reactive SwiftUI interface built around a single-store architecture, with a Today feed for real-time entries, a History view for browsing past days, and BeReal-style photo cards with gradient overlays for a polished, social-app feel.</p>
+    </div>
+
+    <div class="detail-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Snap photos via camera or pick from the photo library using a bridged UIKit image picker</li>
+        <li>Categorize entries as Meal, Snack, or Drink with color-coded pill buttons and custom icons</li>
+        <li>Today feed displaying a scrollable timeline of the day&rsquo;s entries with a daily summary bar</li>
+        <li>History view with calendar-style browsing, day summaries, and drill-down into past entries</li>
+        <li>Persistent local storage using JSON serialization and JPEG images saved to the Documents directory</li>
+        <li>Long-press context menus for entry deletion with automatic image file cleanup</li>
+      </ul>
+    </div>
+
+    <div class="detail-section">
+      <h2>Challenges &amp; What I Learned</h2>
+      <p>Building BeMeal deepened my understanding of modern SwiftUI patterns including the @Observable macro, reactive state management with a single source of truth, and bridging UIKit components into SwiftUI via UIViewControllerRepresentable. I also gained hands-on experience with file-based persistence using FileManager, image compression and lazy loading, and designing reusable view components for a clean, maintainable codebase.</p>
+    </div>
+
+    <a href="https://github.com/ckaiko/BeMeal" target="_blank" rel="noopener" class="card-link" style="font-size:1rem;">View on GitHub &rarr;</a>
+  </main>
+
+  <footer id="footer"></footer>
+
+<script src="../js/components.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

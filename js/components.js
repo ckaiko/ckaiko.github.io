@@ -92,25 +92,31 @@
   ];
 
   const PROJECTS = [
-    { title: 'MediaPlaylistCreator', barTitle: 'playlist_creator.py', icon: '\u{1F3B5}',
+    { title: 'BeMeal', barTitle: 'BeMeal', icon: '\u{1F35D}',
+      gradient: 'linear-gradient(135deg, #b5a689, #a39474)',
+      tags: ['React Native', 'Firebase', 'Mobile', 'Social App', 'In Progress'],
+      summary: 'A food-sharing social app inspired by BeReal. Share daily meal snapshots with friends through push notifications and a real-time social feed.',
+      page: 'projects/bemeal.html' },
+
+    { title: 'MediaPlaylistCreator', barTitle: 'MediaPlaylistCreator', icon: '\u{1F3B5}',
       gradient: 'linear-gradient(135deg, #a8b396, #8fa07c)',
-      tags: ['Python', 'Streamlit', 'OpenAI', 'Spotify API', 'PostgreSQL'],
+      tags: ['Python', 'Streamlit', 'OpenAI', 'Spotify API', 'PostgreSQL', 'In Progress'],
       summary: 'Movie & Song Playlist Recommender using Letterboxd RSS, Spotify API, OpenAI embeddings, PostgreSQL, and a Streamlit dashboard. Fully containerized with Docker.',
       page: 'projects/media-playlist-creator.html' },
 
-    { title: 'TedStem', barTitle: 'tedstem.ts', icon: '\u{1F916}',
+    { title: 'Tedstem', barTitle: 'Tedstem', icon: '\u{1F916}',
       gradient: 'linear-gradient(135deg, #9aa88a, #8a9b78)',
-      tags: ['TypeScript', 'Python', 'AI / ML', 'Hackathon'],
-      summary: 'AI Hacks 2024 hackathon project combining TypeScript and Python to build an AI-powered application with a dual-language architecture.',
+      tags: ['TypeScript', 'React', 'Next.js', 'Python', 'Flask', 'AWS Bedrock', 'Docker'],
+      summary: 'Enhances student-instructor communication, allowing students to post questions and TAs to receive reports on common confusions to address learning gaps effectively.',
       page: 'projects/tedstem.html' },
 
-    { title: 'World Explorer', barTitle: 'WorldExplorer.java', icon: '\u{1F30E}',
+    { title: 'World Explorer', barTitle: 'World Explorer', icon: '\u{1F30E}',
       gradient: 'linear-gradient(135deg, #8e9f7e, #7d9168)',
       tags: ['Java', 'Game Dev', 'Procedural Gen'],
       summary: 'A 2D procedurally-generated exploration game built in Java. Features tile-based rendering, seed-based world generation, and save/load functionality.',
       page: 'projects/world-explorer.html' },
 
-    { title: 'CSM 61A Worksheets', barTitle: 'worksheet.tex', icon: '\u{1F4DA}',
+    { title: 'CSM 61A Worksheets', barTitle: 'CSM 61A Worksheets', icon: '\u{1F4DA}',
       gradient: 'linear-gradient(135deg, #a3af90, #94a682)',
       tags: ['LaTeX', 'Python', 'CS Education'],
       summary: 'LaTeX worksheets for UC Berkeley\u2019s CS Mentors (CSM) program, covering Python fundamentals, recursion, trees, and linked lists for CS 61A students.',
@@ -270,8 +276,9 @@
 
   /** Film card (supports optional link to Letterboxd) */
   function filmCard(film) {
-    const posterHtml = film.poster
-      ? `<img src="${film.poster}" alt="${film.title}" referrerpolicy="no-referrer" loading="lazy">`
+    const posterSrc = film.poster ? (film.poster.startsWith('http') ? film.poster : ROOT + '/' + film.poster) : '';
+    const posterHtml = posterSrc
+      ? `<img src="${posterSrc}" alt="${film.title}" loading="lazy">`
       : '';
     const tag = film.link ? 'a' : 'div';
     const linkAttr = film.link ? ` href="${film.link}" target="_blank" rel="noopener"` : '';
@@ -418,7 +425,7 @@
 
   /* ── Home page previews ── */
   renderInto('home-timeline',  `<div class="timeline">${work.slice(0, 2).map(timelineItem).join('')}</div>`);
-  renderInto('home-projects',  `<div class="card-grid">${PROJECTS.slice(0, 2).map(projectCard).join('')}</div>`);
+  renderInto('home-projects',  `<div class="card-grid">${PROJECTS.slice(0, 3).map(projectCard).join('')}</div>`);
   const recentPhotos = allPhotosRecent(6);
   renderInto('home-media', recentPhotos.length
     ? `<div class="photo-grid">${recentPhotos.map(photoCard).join('')}</div>`
